@@ -1,0 +1,155 @@
+@import url(base.less);
+@paperR : 200px;
+@paperM : 50px;
+.index-top{
+    background: url(../images/azure_bg.png) no-repeat center top;
+    background-size: cover;
+    overflow: hidden;
+}
+.index-middle{
+    background-color: #e1f5fe
+}
+
+.index-contain {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    height: 350px;
+}
+
+.cloud1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 300px;
+    background: url(../images/cloud-1.png) no-repeat;
+    background-size: cover;
+    width:300px;
+    height:120px;
+}
+.cloud2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -600px;
+    background: url(../images/cloud-2.png) no-repeat 0 0;
+    background-size: cover;
+    width:300px;
+    height:156px;
+}
+
+.footer {
+    background-color: #263238;
+    text-align: center;
+    font-size: 1em;
+    color:#eceff1;
+}
+.index-h1{
+    text-align: center;
+    font-size: 3em;
+    line-height: 1.1;
+    color: #424242;
+    font-weight: 300;
+    white-space: nowrap
+}
+.index-h1des{
+    font-size: 1.5em;
+    color: #424242;
+    text-align: center
+}
+.index-h2{
+    font-size: 3em;
+    white-space: nowrap;
+    vertical-align: top;
+    line-height: 1.1;
+    font-weight: 600
+}
+.index-descript{
+    font-size: 1.5em;
+}
+.login-wrap{
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin: 0 0 0 -250px;
+    padding: 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+}
+.index-logo1{
+    vertical-align: top;
+    margin: 0.1em 10px 0 -1em
+}
+.login-tabs{
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative
+}
+.login-tab{
+    text-shadow: none;
+    font-size: 2em;
+    line-height: 2
+}
+.login-tabin{
+    text-shadow: none;
+    background:#fff;
+    height:215px;
+    border-radius: 0 0 10px 10px;
+    text-align:center
+}
+.login-input{
+    margin-top: -15px
+}
+.index-h5{
+    font-family: Roboto, sans-serif
+}
+.index-paper{
+    position: relative;
+    height: (@paperR + @paperM) * 2;
+    margin-top: 50px;
+    color: #424242;
+    line-height: 2
+}
+
+.index-paper1{
+    width: @paperR;
+    height: @paperR;
+    padding: 30px 0 40px 0;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -(@paperR + @paperM)
+}
+.index-paper2{
+    width: @paperR;
+    height: @paperR;
+    padding: 30px 0 40px 0;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: @paperM
+}
+.index-paper3{
+    width: @paperR;
+    height: @paperR;
+    padding: 30px 0 40px 0;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: @paperR + @paperM;
+    margin-left: -(@paperR + @paperM)
+}
+.index-paper4{
+    width: @paperR;
+    height: @paperR;
+    padding: 30px 0 40px 0;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: @paperR + @paperM;
+    margin-left: @paperM
+}
