@@ -1,7 +1,7 @@
 (function() {
     var React = require('react'),
         Router = require('react-router'),
-        AppRoutes = require('./router.jsx'),
+        AppRoutes = require('./router'),
         injectTapEventPlugin = require("react-tap-event-plugin");
 
     injectTapEventPlugin();

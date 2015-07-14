@@ -4,7 +4,7 @@ var RouteHandler = Router.RouteHandler
 var mui = require('material-ui')
 var ThemeManager = new mui.Styles.ThemeManager()
 var {AppCanvas} = mui
-class Master extends React.Component {
+class Root extends React.Component {
 
     constructor() {
         super()
@@ -27,8 +27,8 @@ class Master extends React.Component {
     }
 }
 
-Master.childContextTypes = {
+Root.childContextTypes = {
     muiTheme: React.PropTypes.object
 }
 
-module.exports = Master
+module.exports = Root

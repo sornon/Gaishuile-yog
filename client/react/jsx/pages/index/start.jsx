@@ -3,10 +3,10 @@ var Router = require('react-router')
 var RouteHandler = Router.RouteHandler
 var request = require('reqwest')
 var mui = require('material-ui')
-var lang = require('../lang.jsx')
+var lang = require('../lang')
 var Colors = mui.Styles.Colors
 //组件
-var FullWidthSection = require('../../components/full-width-section.jsx')
+var FullWidthSection = require('../../components/full-width-section')
 var {TextField, Tabs, Tab, RaisedButton, Paper, Dialog, FlatButton, LinearProgress} = mui
 
 
@@ -22,6 +22,11 @@ var Start = React.createClass({
                 textShadow: 'none',
                 fontSize: '2em',
                 lineHeight: '2'
+            },
+            textField: {
+                textAlign: 'left',
+                position:'absolute',
+                bottom:'-10px'
             },
             inputin: {
                 fontFamily: 'Roboto, sans-serif',
@@ -73,10 +78,12 @@ var Start = React.createClass({
                                 <Tab label={lang.login[0]} style={styles.tab}> 
                                     <div className="login-tabin">
                                         <TextField
+                                            errorStyle={styles.textField}
                                             hintText={lang.login[2]}
                                             floatingLabelText={lang.login[3]}
                                             inputStyle={styles.inputin} />
                                         <TextField
+                                            errorStyle={styles.textField}
                                             className="login-input"
                                             type='password'
                                             hintText={lang.login[4]}
@@ -97,6 +104,7 @@ var Start = React.createClass({
                                     }
                                     <div className="login-tabin">
                                         <TextField
+                                            errorStyle={styles.textField}
                                             ref="newPhone"
                                             errorText={this.state.phoneErr}
                                             hintText={lang.login[6]}
@@ -114,6 +122,7 @@ var Start = React.createClass({
                                             title={this.state.smsDesc}
                                             actions={smsActions}>
                                             <TextField
+                                                errorStyle={styles.textField}
                                                 ref="sms"
                                                 errorText={this.state.smsErr}
                                                 hintText={lang.login[8]}
@@ -165,8 +174,8 @@ var Start = React.createClass({
     },
     timer: null,
     phoneBlurErr: false,
-    baseUrl:'http://127.0.0.1:8085',
-    // baseUrl:'http://api.gaishuile.com',
+    // baseUrl:'http://127.0.0.1:8085',
+    baseUrl:'http://api.gaishuile.com',
     _handleQuickLogin: function(){
         var that = this
         if(!this._handlePhoneCheck()) return
@@ -209,9 +218,9 @@ var Start = React.createClass({
         }.bind(this), 1000);
     },
     smsCheckShow: function(){
-        this.refs.sms.setValue('')
         this.setState({smsErr: ''})
         this.refs.smsCheck.show()
+        this.refs.sms.setValue('')
     },
     _handleSmsDiaClose: function(){
         clearTimeout(this.timer)
