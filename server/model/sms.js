@@ -3,7 +3,7 @@ var moment = require('moment')
 var crypto = require('crypto')
 //发送短信验证码方法
 var sendMS = function(phone, code){
-    return
+    // return
     //云之讯参数
     var appId = 'a226d00ad00b4c8fae6955e6f9e5ca7c'
     var sid = '239efa53db848efa6acf82e4b2ca49ab'
@@ -15,6 +15,7 @@ var sendMS = function(phone, code){
     var md5 = crypto.createHash('md5')
     sig = md5.update(sig).digest('hex')
     auth = new Buffer(auth).toString('base64')
+    console.log('send')
     yog.ral('SMS', {
         data:{
             sid: sid,
@@ -27,7 +28,7 @@ var sendMS = function(phone, code){
             sig: sig
         }
     }).on('data', function(data){
-        //console.log(data)
+        console.log(data)
     }).on('error', function(err){
         console.log(err)
     })

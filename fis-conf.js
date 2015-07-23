@@ -23,6 +23,11 @@ fis.config.set('deploy', {
         receiver: 'http://www.commonfe.com:8085/yog/upload'
     }
 });
+fis.config.set('roadmap.path', [{
+    reg: /^\/server\/conf\/(ral\.js)$/i,
+    useMap: false,
+    release: '${config}/ral/${namespace}\.js'
+}].concat(fis.config.get('roadmap.path', [])));
 fis.config.set('project.exclude', "/client/react");
 fis.config.set('project.watch.exclude', "/client/react/**");
 // fis.config.set('project.fileType.text', 'jsx'); //*.jsx files are text file.

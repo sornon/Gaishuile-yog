@@ -6,7 +6,10 @@ module.exports = function(router){
             next()
         })
     })
+
+    router.get('/login', router.action('login'))
     router.get('/', router.action('index'))
+    router.get('/**', router.action('index'))
     // router.get('/app/**', router.action('app'))
     // you can add app common logic here
     // router.use(function(req, res, next){
